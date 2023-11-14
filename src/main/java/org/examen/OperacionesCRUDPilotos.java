@@ -25,7 +25,7 @@ public class OperacionesCRUDPilotos {
         }
     }
 
-    public static Piloto LeerPiloto(int id, Path rutaBaseDatos) {
+    public static Piloto leerPiloto(int id, Path rutaBaseDatos) {
         Piloto p;
         try (Connection conexion = DriverManager.getConnection("jdbc:sqlite:" + rutaBaseDatos.toString())) {
             String consultaSQL = "SELECT * " +
@@ -45,7 +45,7 @@ public class OperacionesCRUDPilotos {
         return p;
     }
 
-    public static List<Piloto> LeerPilotos(Path rutaBaseDatos) {
+    public static List<Piloto> leerPilotos(Path rutaBaseDatos) {
         List<Piloto> pilotos = new ArrayList<>();
         try (Connection conexion = DriverManager.getConnection("jdbc:sqlite:" + rutaBaseDatos.toString())) {
             String consultaSQL = "SELECT * FROM drivers";

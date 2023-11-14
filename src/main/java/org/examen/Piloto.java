@@ -21,6 +21,15 @@ public class Piloto {
         this.urlFoto = urlFoto;
     }
 
+    public Piloto(String codigo, String nombre, String apellido, LocalDate fechaNacimiento, String nacionalidad, String urlFoto) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaNacimiento = fechaNacimiento;
+        this.nacionalidad = nacionalidad;
+        this.urlFoto = urlFoto;
+    }
+
     public int getId() {
         return id;
     }
